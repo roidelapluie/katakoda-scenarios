@@ -26,6 +26,7 @@ Here is a one-liner which will prompt for a password and store it:
 To make that easier to read, you can also paste this into a file, called
 `bcrypt.py`. To do so, type the following commands:
 
+```
 cat << EOF > gen-pass.py
 import getpass
 import bcrypt
