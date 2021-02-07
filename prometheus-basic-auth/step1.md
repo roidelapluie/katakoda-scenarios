@@ -1,6 +1,3 @@
-# Generate a bcrypt password
-
-
 Prometheus takes passwords hashed with bcrypt. To validate the password,
 it does not need to know exactly your password. Instead, it needs a "hash" of
 the password, which will be compared to the password you provide to your
@@ -11,14 +8,14 @@ also means that you need to provide a hashed version of the password, which is
 an step that can be done in multiple ways.
 
 
-## Pre-requisite
+## Pre-requisites
 
 To generate a hashed password, we will use python3-bcrypt.
 
 Let's install it:
 
 ```
-apt install python3 bcrypt
+$ apt install python3-bcrypt
 ```
 
 There are other ways to do that, we had to pick one way. Python is already
@@ -26,10 +23,10 @@ present on most systems, so that seems like a great way to start.
 
 ## Generate the password
 
-Here is a one-line which will prompt for a password and store it:
+Here is a one-liner which will prompt for a password and store it:
 
 ```
-$ python3 -c 'import getpass;import bcrypt;print(bcrypt.hashpw(getpass.getpass("password: ").encode("utf-8"), bcrypt.gensalt()).decode())'
+$ clear;python3 -c 'import getpass;import bcrypt;print(bcrypt.hashpw(getpass.getpass("password: ").encode("utf-8"), bcrypt.gensalt()).decode())'
 ```
 
 To make that easier to read, you can also paste this into a file, called

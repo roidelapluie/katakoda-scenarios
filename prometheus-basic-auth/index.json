@@ -12,10 +12,6 @@
       {
         "title": "Setting up and starting Prometheus",
         "text": "step2.md"
-      },
-      {
-        "title": "Testing the setup",
-        "text": "step3.md"
       }
     ],
     "intro": {
@@ -26,7 +22,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "ubuntu:2004"

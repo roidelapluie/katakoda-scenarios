@@ -52,3 +52,8 @@ $ ./prometheus --web.config.file=web.yml
 ```
 
 Prometheus should now be running!
+
+You can try to login to your prometheus server at
+https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
+
+It should prompt you for your username and password.
