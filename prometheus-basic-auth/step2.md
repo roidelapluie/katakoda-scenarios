@@ -35,7 +35,7 @@ Notes:
 
 ## Validate web.yml
 
-You can validate that file with `promtool check web-config web.yml`{execute{}}:
+You can validate that file with `promtool check web-config web.yml`{{execute}}:
 
 ```
 web.yml SUCCESS
