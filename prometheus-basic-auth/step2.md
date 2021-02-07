@@ -4,12 +4,12 @@ the first release to have basic authentication support.
 # Download Prometheus
 
 ```
-$ wget https://github.com/prometheus/prometheus/releases/download/v2.24.1/prometheus-2.24.1.linux-amd64.tar.gz
-$ tar xf prometheus-2.24.1.linux-amd64.tar.gz
-$ cd prometheus-2.24.1.linux-amd64
-```
+wget https://github.com/prometheus/prometheus/releases/download/v2.24.1/prometheus-2.24.1.linux-amd64.tar.gz
+tar xf prometheus-2.24.1.linux-amd64.tar.gz
+cd prometheus-2.24.1.linux-amd64
+```{{execute}}
 
-You should now see a bunch of files:
+You should now see a bunch of files if you run `ls`{{execute}}:
 
 ```
 $ ls
@@ -21,11 +21,11 @@ console_libraries  consoles  LICENSE  NOTICE  prometheus  prometheus.yml promtoo
 Let's create a web.yml file ([documentation](https://prometheus.io/docs/prometheus/latest/configuration/https/)):
 
 ```
-$ cat << 'EOF' > web.yml
+cat << 'EOF' > web.yml
 basic_auth_users:
     alice: $2b$12$hNf2lSsxfm0.i4a.1kVpSOVyBCfIB51VRjgBUyv6kdnyTlgWj81Ay
 EOF
-```
+```{{execute}}
 
 Notes:
 - We use `'EOF'` in this exemple to avoid variable expansion. Without this, the
@@ -35,10 +35,9 @@ Notes:
 
 ## Validate web.yml
 
-You can validate that file with `promtool check web-config`:
+You can validate that file with `promtool check web-config web.yml`{execute{}}:
 
 ```
-$ ./promtool check web-config web.yml
 web.yml SUCCESS
 ```
 
@@ -46,9 +45,7 @@ web.yml SUCCESS
 
 You can now launch Prometheus, with the web.yml file:
 
-```
-$ ./prometheus --web.config.file=web.yml
-```
+`./prometheus --web.config.file=web.yml`{{execute}}
 
 Prometheus should now be running!
 
