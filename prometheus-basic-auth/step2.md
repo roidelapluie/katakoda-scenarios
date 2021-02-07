@@ -1,6 +1,5 @@
-# Prepare and launch Prometheus
-
-Let's download and prepare Prometheus. We will use Prometheus 2.24.1.
+Let's download and prepare Prometheus. We will use Prometheus 2.24.1, which is
+the first release to have basic authentication support.
 
 # Download Prometheus
 
